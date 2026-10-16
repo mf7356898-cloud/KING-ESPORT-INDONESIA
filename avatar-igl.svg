@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <filter id="neonGold">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <circle cx="100" cy="100" r="90" fill="#0c0915" stroke="#f59e0b" stroke-width="3"/>
+  <!-- Head & Helmet -->
+  <path d="M52 145 C52 75, 72 45, 100 45 C128 45, 148 75, 148 145 Z" fill="#201538" stroke="#f59e0b" stroke-width="2"/>
+  <!-- Gold King Crown on Headset -->
+  <polygon points="85,42 93,25 100,35 107,25 115,42" fill="#fbbf24" stroke="#ca8a04" stroke-width="1.5" filter="url(#neonGold)"/>
+  <!-- Headset -->
+  <path d="M42 95 Q100 35 158 95" fill="none" stroke="#e2e8f0" stroke-width="5"/>
+  <rect x="36" y="85" width="16" height="35" rx="6" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+  <rect x="148" y="85" width="16" height="35" rx="6" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+  <path d="M48 110 L70 125" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="72" cy="126" r="4" fill="#ef4444"/>
+  <!-- Face Screen / Shaded Visor -->
+  <path d="M68 95 L132 95 L125 130 L75 130 Z" fill="#090710" stroke="#a855f7" stroke-width="2"/>
+  <line x1="75" y1="110" x2="125" y2="110" stroke="#c084fc" stroke-width="2"/>
+  <!-- Shoulders -->
+  <path d="M30 185 C42 145, 75 142, 100 142 C125 142, 158 145, 170 185 Z" fill="#2a1b4d" stroke="#f59e0b" stroke-width="2"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="padGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a1845"/>
+      <stop offset="50%" stop-color="#140d25"/>
+      <stop offset="100%" stop-color="#08060f"/>
+    </linearGradient>
+  </defs>
+  <!-- Mousepad Perspective -->
+  <polygon points="30,70 170,70 185,150 15,150" fill="url(#padGrad)" stroke="#a855f7" stroke-width="2.5" rx="6"/>
+  <!-- Top RGB Edge Glow -->
+  <line x1="30" y1="70" x2="170" y2="70" stroke="#c084fc" stroke-width="4"/>
+  <!-- Mousepad Artwork (Cyber Crown & Geometric lines) -->
+  <line x1="35" y1="110" x2="165" y2="110" stroke="#7e22ce" stroke-width="1.5" stroke-dasharray="8 4"/>
+  <polygon points="90,105 100,90 110,105 105,112 95,112" fill="#c084fc" opacity="0.8"/>
+  <text x="100" y="130" text-anchor="middle" font-family="'Orbitron', sans-serif" font-size="11" font-weight="900" fill="#ffffff" letter-spacing="3">KING ESPORT</text>
+  <text x="100" y="142" text-anchor="middle" font-family="'Orbitron', sans-serif" font-size="6" font-weight="700" fill="#a855f7" letter-spacing="2">PRO SPEED EDITION</text>
+</svg>

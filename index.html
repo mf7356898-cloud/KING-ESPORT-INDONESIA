@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KING ESPORT - Mobile Legends, Free Fire & PUBG Mobile</title>
+  <meta name="description" content="Website Resmi KING ESPORT. Organisasi esports profesional spesialis Mobile Legends (MLBB), Free Fire (FF), dan PUBG Mobile (PUBGM). Didominasi warna ungu cyber dan hitam obsidian.">
+  <meta name="keywords" content="KING ESPORT, Esport ML, Esport FF, Esport PUBG, Mobile Legends, Free Fire, PUBG Mobile, Roster Esport Indonesia">
+
+  <!-- Google Fonts: Orbitron & Rajdhani -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Cyber Particle Canvas & Background Grid -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="cyber-grid-overlay"></div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo">
+        <img src="assets/logo.svg" alt="KING ESPORT Logo" class="brand-icon">
+        <div class="brand-text">
+          <span class="brand-title">KING ESPORT</span>
+          <span class="brand-sub">ML • FF • PUBGM</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#divisions" class="nav-link">Divisi Game</a>
+        <a href="#rosters" class="nav-link">Pro Roster</a>
+        <a href="#matches" class="nav-link">Jadwal Tanding</a>
+        <a href="#trophies" class="nav-link">Prestasi</a>
+        <a href="#merch" class="nav-link">Official Merch</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- SFX Audio Toggle Button -->
+        <button id="sound-toggle" class="sound-toggle-btn" title="Toggle Efek Suara Cyber">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+
+        <a href="#tryout" class="btn-cyber-primary open-tryout-btn">
+          <span>JOIN ROSTER</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Hamburger Button for Mobile -->
+        <button class="hamburger-btn" aria-label="Menu Mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-glow"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            #1 MOBILE ESPORTS DYNASTY 2026
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-king">KING</span>
+            <span class="title-esport">ESPORT</span>
+          </h1>
+
+          <p class="hero-tagline">
+            <span>RULE THE GAME. CLAIM THE THRONE.</span><br>
+            Penguasa panggung mobile gaming terbesar di Indonesia & Asia Tenggara: <strong>Mobile Legends</strong>, <strong>Free Fire</strong>, dan <strong>PUBG Mobile</strong>.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#rosters" class="btn-cyber-primary">
+              <span>EXPLORE PRO ROSTER</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
+              </svg>
+            </a>
+            <a href="#matches" class="btn-cyber-outline">
+              <span class="pulse-dot" style="background:#ef4444; box-shadow:0 0 10px #ef4444;"></span>
+              <span>JADWAL MATCH LIVE</span>
+            </a>
+          </div>
+
+          <!-- Live Match Countdown Ticker -->
+          <div class="hero-match-ticker">
+            <div class="ticker-label">
+              <span class="pulse-dot" style="background:#ef4444;"></span>
+              MPL GRAND FINAL
+            </div>
+            <div class="ticker-match-info">
+              <span>KING ESPORT</span>
+              <span class="ticker-vs">VS</span>
+              <span>TITAN FORCE</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-item" id="cd-days">02</span>d :
+              <span class="countdown-item" id="cd-hours">14</span>h :
+              <span class="countdown-item" id="cd-mins">35</span>m :
+              <span class="countdown-item" id="cd-secs">00</span>s
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero 3D Hologram Crest -->
+        <div class="hero-visual">
+          <div class="hero-shield-wrapper">
+            <div class="hero-rings"></div>
+            
+            <div class="hero-emblem-card">
+              <img src="assets/logo.svg" alt="KING ESPORT Emblem" class="hero-emblem-svg">
+              <div class="hero-emblem-badge">THE ROYAL THRONE</div>
+              <div class="hero-emblem-rank">★ MLBB • FF • PUBGM ★</div>
+            </div>
+
+            <!-- Floating Stat Chip 1 -->
+            <div class="floating-chip chip-1">
+              <div class="chip-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                  <path d="M4 22h16"></path>
+                  <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                  <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                  <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                </svg>
+              </div>
+              <div class="chip-data">
+                <span class="chip-val">48+ WINS</span>
+                <span class="chip-lbl">TROFI KEJUARAAN</span>
+              </div>
+            </div>
+
+            <!-- Floating Stat Chip 2 -->
+            <div class="floating-chip chip-2">
+              <div class="chip-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <div class="chip-data">
+                <span class="chip-val">94.2%</span>
+                <span class="chip-lbl">WIN RATE 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STATS TICKER SECTION
+       ========================================================================== -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-num" data-target="48" data-suffix="+">48+</div>
+          <div class="stat-title">Piala & Juara Turnamen</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" data-target="1.5" data-suffix="M+">1.5M+</div>
+          <div class="stat-title">Komunitas King Army</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" data-target="94.2" data-suffix="%">94.2%</div>
+          <div class="stat-title">Rasio Kemenangan Musim Ini</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" data-target="13" data-suffix="">13</div>
+          <div class="stat-title">Atlet Pro Mobile Terdaftar</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TRI-DIVISION SHOWCASE (MLBB, FF, PUBGM)
+       ========================================================================== -->
+  <section id="divisions" class="divisions-showcase">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">TIGA PILAR UTAMA</span>
+        <h2 class="section-title">DIVISI <span>UNGGULAN KAMI</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">Tiga divisi game kompetitif mobile paling bergengsi di bawah bendera KING ESPORT.</p>
+      </div>
+
+      <div class="divisions-grid">
+        <!-- Division 1: MLBB -->
+        <div class="division-banner-card">
+          <img src="assets/game-mlbb.svg" alt="Mobile Legends" class="division-card-icon">
+          <h3 class="division-card-title">MOBILE LEGENDS</h3>
+          <div class="division-card-league">MPL ID & M-WORLD SERIES</div>
+          <p class="division-card-desc">
+            Penguasa Land of Dawn dengan rotasi makro presisi, objektif Lord sempurna, dan kekompakan teamfight tanpa celah.
+          </p>
+          <a href="#rosters" class="division-card-btn" onclick="document.querySelector('.tab-btn[data-filter=\'mlbb\']').click();">
+            <span>ROSTER MLBB (5 ATLET)</span>
+            &rarr;
+          </a>
+        </div>
+
+        <!-- Division 2: Free Fire -->
+        <div class="division-banner-card">
+          <img src="assets/game-ff.svg" alt="Free Fire" class="division-card-icon">
+          <h3 class="division-card-title">FREE FIRE</h3>
+          <div class="division-card-league">FFWS & MASTER LEAGUE</div>
+          <p class="division-card-desc">
+            Gaya bermain super agresif rusher berkecepatan kilat, lemparan granat akurat, dan rekor Booyah berturut-turut di panggung dunia.
+          </p>
+          <a href="#rosters" class="division-card-btn" onclick="document.querySelector('.tab-btn[data-filter=\'ff\']').click();">
+            <span>ROSTER FF (4 ATLET)</span>
+            &rarr;
+          </a>
+        </div>
+
+        <!-- Division 3: PUBG Mobile -->
+        <div class="division-banner-card">
+          <img src="assets/game-pubg.svg" alt="PUBG Mobile" class="division-card-icon">
+          <h3 class="division-card-title">PUBG MOBILE</h3>
+          <div class="division-card-league">PMSL SEA & PMGC GLOBAL</div>
+          <p class="division-card-desc">
+            Eksekusi rotasi kendaraan taktis di Erangel dan Miramar, komando IGL berdarah dingin, serta spray kontrol jarak jauh mematikan.
+          </p>
+          <a href="#rosters" class="division-card-btn" onclick="document.querySelector('.tab-btn[data-filter=\'pubgm\']').click();">
+            <span>ROSTER PUBGM (4 ATLET)</span>
+            &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ROSTERS & TEAMS SECTION
+       ========================================================================== -->
+  <section id="rosters" class="roster-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">OFFICIAL ROSTER 2026</span>
+        <h2 class="section-title">WARRIORS OF <span>THE THRONE</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">Pilih divisi di bawah ini untuk melihat skuad lengkap dan statistik mendalam atlet kami.</p>
+      </div>
+
+      <!-- Division Tabs -->
+      <div class="roster-tabs">
+        <button class="tab-btn active" data-filter="all">SEMUA DIVISI</button>
+        <button class="tab-btn" data-filter="mlbb">MOBILE LEGENDS</button>
+        <button class="tab-btn" data-filter="ff">FREE FIRE</button>
+        <button class="tab-btn" data-filter="pubgm">PUBG MOBILE</button>
+      </div>
+
+      <!-- Player Cards Grid -->
+      <div class="roster-grid">
+        <!-- MLBB Player 1: APHRODITE -->
+        <div class="player-card" data-game="mlbb" data-player="aphrodite">
+          <div class="player-media">
+            <span class="game-tag">MLBB</span>
+            <span class="player-flag">🇮🇩</span>
+            <img src="assets/avatar-duelist.svg" alt="APHRODITE" class="player-avatar-svg" style="filter: hue-rotate(40deg);">
+          </div>
+          <div class="player-info">
+            <div class="player-ign">
+              <span>APHRODITE</span>
+              <span style="color: var(--purple-bright); font-size: 0.9rem;">#07</span>
+            </div>
+            <div class="player-real-name">Clarissa Angela</div>
+            <div class="player-stats-row">
+              <div>
+                <div class="p-stat-val">84%</div>
+                <div class="p-stat-lbl">WINRATE</div>
+              </div>
+              <div>
+                <div class="p-stat-val">4.82</div>
+                <div class="p-stat-lbl">K/D/A</div>
+              </div>
+              <div>
+                <div class="p-stat-val">124★</div>
+                <div class="p-stat-lbl">MYTHIC</div>
+              </div>
+            </div>
+            <div class="player-footer">
+              <span class="player-role-badge">MIDLANER</span>
+              <span class="player-btn-view">Detail Stat &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MLBB Player 2: VORTEX -->
+        <div class="player-card" data-game="mlbb" data-player="vortex">
+          <div class="player-media">
+            <span class="game-tag">MLBB</span>
+            <span class="player-flag">🇮🇩</span>
+            <img src="assets/avatar-duelist.svg" alt="VORTEX" class="player-avatar-svg">
+          </div>
+          <div class="player-info">
+            <div class="player-ign">
+              <span>VORTEX</span>
+              <span style="color: var(--purple-bright); font-size: 0.9rem;">#01</span>
+            </div>
+            <div class="player-real-name">Reza Pratama</div>
+            <div class="player-stats-row">
+              <div>
+                <div class="p-stat-val">82%</div>
+                <div class="p-stat-lbl">WINRATE</div>
+              </div>
+              <div>
+                <div class="p-stat-val">5.10</div>
+                <div class="p-stat-lbl">K/D/A</div>
+              </div>
+              <div>
+                <div class="p-stat-val">150★</div>
+                <div class="p-stat-lbl">MYTHIC</div>
+              </div>
+            </div>
+            <div class="player-footer">
+              <span class="player-role-badge">JUNGLER / CORE</span>
+              <span class="player-btn-view">Detail Stat &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MLBB Player 3: SHADOW -->
+        <div class="player-card" data-game="mlbb" data-player="shadow">
+          <div class="player-media">
+            <span class="game-tag">MLBB</span>
+            <span class="player-flag">🇮🇩</span>
+            <img src="assets/avatar-roamer.svg" alt="SHADOW" class="player-avatar-svg">
+          </div>
+          <div class="player-info">
+            <div class="player-ign">
+              <span>SHADOW</span>
+              <span style="color: var(--purple-bright); font-size: 0.9rem;">#22</span>
+            </div>
+            <div class="player-real-name">Bagas Nur</div>
+            <div class="player-stats-row">
+              <div>
+                <div class="p-stat-val">81%</div>
+                <div class="p-stat-lbl">WINRATE</div>
+              </div>
+              <div>
+                <div class="p-stat-val">3.10</div>
+                <div class="p-stat-lbl">K/D/A</div>
+              </div>
+              <div>
+                <div class="p-stat-val">130★</div>
+                <div class="p-stat-lbl">MYTHIC</div>
+              </div>
+            </div>
+            <div class="player-footer">
+              <span class="player-role-badge">ROAMER / TANK</span>
+              <span class="player-btn-view">Detail Stat &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MLBB Player 4: ZEUS -->
+        <div class="player-card" data-game="mlbb" data-player="zeus">
+          <div class="player-media">
+            <span class="game-tag">MLBB</span>
+            <span class="player-flag">🇮🇩</span>
+            <img src="assets/avatar-sniper.svg" alt="ZEUS" class="player-avatar-svg" style="filter: hue-rotate(60deg);">
+          </div>
+          <div class="player-info">
+            <div class="player-ign">
+              <span>ZEUS</span>
+              <span style="color: var(--accent-gold); font-size: 0.9rem;">#10</span>
+            </div>
+            <div class="player-real-name">Fajar Maulana</div>
+            <div class="player-stats-row">
+              <div>
+                <div class="p-stat-val">79%</div>
+                <div class="p-stat-lbl">WINRATE</div>
+              </div>
+              <div>
+                <div class="p-stat-val">4.95</div>
+                <div class="p-stat-lbl">K/D/A</div>
+              </div>
+              <div>
+                <div class="p-stat-val">142★</div>
+                <div class="p-stat-lbl">MYTHIC</div>
+              </div>
+            </div>
+            <div class="player-footer">
+              <span class="player-role-badge">GOLD LANER</span>
+              <span class="player-btn-view">Detail Stat &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MLBB Player 5: TITAN -->
+        <div class="player-card" data-game="mlbb" data-player="titan">
+          <div class="player-media">
+            <span class="game-tag">MLBB</span>
+            <span class="player-flag">🇮🇩</span>
+            <img src="assets/avatar-roamer.svg" alt="TITAN" class="player-avatar-svg" style="filter: hue-rotate(180deg);">
+          </div>
+          <div class="player-info">
+            <div class="player-ign">
+              <span>TITAN</span>
+              <span style="color: var(--purple-bright); font-size: 0.9rem;">#05</span>
+            </div>
+            <div class="player-real-name">Gilang Saputra</div>
+            <div class="player-stats-row">
+              <div>
+                <div class="p-stat-val">77%</div>
+                <div class="p-stat-lbl">WINRATE</div>
+              </div>
+              <div>
+                <div class="p-stat-val">3.80</div>
+                <div class="p-stat-lbl">K/D/A</div>
+              </div>
+              <div>
+                <div class="p-stat-val">118★</div>
+                <div class="p-stat-lbl">MYTHIC</div>
+              </div>
+            </div>
+            <div class="player-footer">
+              <span class="player-role-badge">EXP LANER</span>
+              <span class="player-btn-view">Detail Stat &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FREE FIRE Player 1: VALKYRIE -->
+        <div class="player-card" data-game="ff" data-player="valkyrie">
+          <div class="player-media">
+            <span class="game-tag">FREE FIRE</span>
+            <span class="player-flag">🇮🇩</span>
+            <img src="assets/avatar-sniper.svg" alt="VALKYRIE" class="player-avatar-svg" style="filter: hue-rotate(280deg);">
+          </div>
+          <div class="player-info">
+            <div class="player-ign">
+              <span>VALKYRIE</span>
+              <span style="color: var(--purple-bright); font-size: 0.9rem;">#77</span>
+            </div>
+            <div class="player-real-name">Sarah Octavia</div>
+            <div class="player-stats-row">
+              <div>
+                <div class="p-stat-val">73%</div>
+                <div class="p-stat-lbl">WINRATE</div>
+              </div>
+              <div>
+                <div class="p-stat-val">4.65</div>
+                <div class="p-stat-lbl">K/D</div>
+              </div>
+              <div>
+                <div class="p-stat-val">68%</div>
+                <div class="p-stat-lbl">HEADSHOT</div>
+              </div>
+            </div>
+            <div class="player-footer">
+              <span class="player-role-badge">SNIPER</span>
+              <span class="player-btn-view">Detail Stat &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FREE FIRE Player 2: DRACO -->
+        <div class="player-card" data-game="ff" data-player="draco">
+          <div class="player-media">
+            <span class="game-tag">FREE FIRE</span>
+            <span class="player-flag">🇮🇩</span>
+            <img src="assets/avatar-duelist.svg" alt="DRACO" class="player-avatar-svg" style="filter: hue-rotate(320deg);">
+          </div>
+          <div class="player-info">
+            <div class="player-ign">
+              <span>DRACO</span>
+              <span style="color: #ef4444; font-size: 0.9rem;">#09</span>
+            </div>
+            <div class="player-real-name">Danu Pratama</div>
+            <div class="player-stats-row">
+              <div>
+                <div class="p-stat-val">76%</div>
+                <div class="p-stat-lbl">WINRATE</div>
+              </div>
+              <div>
+                <div class="p-stat-val">5.40</div>
+                <div class="p-stat-lbl">K/D</div>
+              </div>
+              <div>
+                <div class="p-stat-val">74%</div>
+                <div class="p-stat-lbl">HEADSHOT</div>
+              </div>
+            </div>
+            <div class="player-footer">
+              <span class="player-role-badge">RUSHER 1</span>
+              <span class="player-btn-view">Detail Stat &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FREE FIRE Player 3: INFERNO -->
+        <div class="player-card" data-game="ff" data-player="inferno">
+          <div class="player-media">
+            <span class="game-tag">FREE FIRE</span>
+            <span class="player-flag">🇮🇩</span>
+            <img src="assets/avatar-roamer.svg" alt="INFERNO" class="player-avatar-svg" style="filter: hue-rotate(340deg);">
+          </div>
+          <div class="player-info">
+            <div class="player-ign">
+              <span>INFERNO</span>
+              <span style="color: #f59e0b; font-size: 0.9rem;">#18</span>
+            </div>
+            <div class="player-real-name">Rendy Putra</div>
+            <div class="player-stats-row">
+              <div>
+                <div class="p-stat-val">71%</div>
+                <div class="p-stat-lbl">WINRATE</div>
+              </div>
+              <div>
+                <div class="p-stat-val">4.20</div>
+                <div class="p-stat-lbl">K/D</div>
+              </div>
+              <div>
+                <div class="p-stat-val">55%</div>
+                <div class="p-stat-lbl">GRENADE ACC</div>
+              </div>
+            </div>
+            <div class="player-footer">
+              <span class="player-role-badge">GRENADIER</span>
+              <span class="player-btn-view">Detail Stat &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FREE FIRE Player 4: SPECTER -->
+        <div class="player-card" data-game="ff" data-player="specter">
+          <div class="player-media">
+            <span class="game-tag">FREE FIRE</span>
+            <span class="player-flag">🇮🇩</span>
+            <img src="assets/avatar-igl.svg" alt="SPECTER" class="player-avatar-svg" style="filter: hue-rotate(290deg);">
+          </div>
+          <div class="player-info">
+            <div class="player-ign">
+              <span>SPECTER</span>
+              <span style="color: var(--accent-gold); font-size: 0.9rem;">★ CAPT</span>
+            </div>
+            <div class="player-real-name">Aldi Kusuma</div>
+            <div class="player-stats-row">
+              <div>
+                <div class="p-stat-val">75%</div>
+                <div class="p-stat-lbl">WINRATE</div>
+              </div>
+              <div>
+                <div class="p-stat-val">3.90</div>
+                <div class="p-stat-lbl">K/D</div>
+              </div>
+              <div>
+                <div class="p-stat-val">26</div>
+                <div class="p-stat-lbl">TOURNEYS</div>
+              </div>
+            </div>
+            <div class="player-footer">
+              <span class="player-role-badge">IGL / SUPPORT</span>
+              <span class="player-btn-view">Detail Stat &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PUBG MOBILE Player 1: KAISER -->
+        <div class="player-card" data-game="pubgm" data-player="kaiser">
+          <div class="player-media">
+            <span class="game-tag">PUBG MOBILE</span>
+            <span class="player-flag">🇮🇩</span>
+            <img src="assets/avatar-sniper.svg" alt="KAISER" class="player-avatar-svg">
+          </div>
+          <div class="player-info">
+            <div class="player-ign">
+              <span>KAISER</span>
+              <span style="color: var(--purple-bright); font-size: 0.9rem;">#99</span>
+            </div>
+            <div class="player-real-name">Dimas Wijaya</div>
+            <div class="player-stats-row">
+              <div>
+                <div class="p-stat-val">68%</div>
+                <div class="p-stat-lbl">WINRATE</div>
+              </div>
+              <div>
+                <div class="p-stat-val">5.20</div>
+                <div class="p-stat-lbl">K/D</div>
+              </div>
+              <div>
+                <div class="p-stat-val">42%</div>
+                <div class="p-stat-lbl">HEADSHOT</div>
+              </div>
+            </div>
+            <div class="player-footer">
+              <span class="player-role-badge">TERMINATOR</span>
+              <span class="player-btn-view">Detail Stat &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PUBG MOBILE Player 2: CYPH3R -->
+        <div class="player-card" data-game="pubgm" data-player="cyph3r">
+          <div class="player-media">
+            <span class="game-tag">PUBG MOBILE</span>
+            <span class="player-flag">🇮🇩</span>
+            <img src="assets/avatar-igl.svg" alt="CYPH3R" class="player-avatar-svg">
+          </div>
+          <div class="player-info">
+            <div class="player-ign">
+              <span>CYPH3R</span>
+              <span style="color: var(--accent-gold); font-size: 0.9rem;">★ CAPT</span>
+            </div>
+            <div class="player-real-name">Kevin Santoso</div>
+            <div class="player-stats-row">
+              <div>
+                <div class="p-stat-val">74%</div>
+                <div class="p-stat-lbl">WINRATE</div>
+              </div>
+              <div>
+                <div class="p-stat-val">3.60</div>
+                <div class="p-stat-lbl">K/D</div>
+              </div>
+              <div>
+                <div class="p-stat-val">30</div>
+                <div class="p-stat-lbl">TOURNEYS</div>
+              </div>
+            </div>
+            <div class="player-footer">
+              <span class="player-role-badge">IGL COMMANDER</span>
+              <span class="player-btn-view">Detail Stat &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PUBG MOBILE Player 3: HAWKEYE -->
+        <div class="player-card" data-game="pubgm" data-player="hawkeye">
+          <div class="player-media">
+            <span class="game-tag">PUBG MOBILE</span>
+            <span class="player-flag">🇮🇩</span>
+            <img src="assets/avatar-sniper.svg" alt="HAWKEYE" class="player-avatar-svg" style="filter: hue-rotate(200deg);">
+          </div>
+          <div class="player-info">
+            <div class="player-ign">
+              <span>HAWKEYE</span>
+              <span style="color: #06b6d4; font-size: 0.9rem;">#11</span>
+            </div>
+            <div class="player-real-name">Rian Gunawan</div>
+            <div class="player-stats-row">
+              <div>
+                <div class="p-stat-val">70%</div>
+                <div class="p-stat-lbl">WINRATE</div>
+              </div>
+              <div>
+                <div class="p-stat-val">4.45</div>
+                <div class="p-stat-lbl">K/D</div>
+              </div>
+              <div>
+                <div class="p-stat-val">52%</div>
+                <div class="p-stat-lbl">HEADSHOT</div>
+              </div>
+            </div>
+            <div class="player-footer">
+              <span class="player-role-badge">SNIPER SCOUT</span>
+              <span class="player-btn-view">Detail Stat &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PUBG MOBILE Player 4: BARRICADE -->
+        <div class="player-card" data-game="pubgm" data-player="barricade">
+          <div class="player-media">
+            <span class="game-tag">PUBG MOBILE</span>
+            <span class="player-flag">🇮🇩</span>
+            <img src="assets/avatar-roamer.svg" alt="BARRICADE" class="player-avatar-svg" style="filter: hue-rotate(240deg);">
+          </div>
+          <div class="player-info">
+            <div class="player-ign">
+              <span>BARRICADE</span>
+              <span style="color: var(--purple-bright); font-size: 0.9rem;">#88</span>
+            </div>
+            <div class="player-real-name">Tommy Siregar</div>
+            <div class="player-stats-row">
+              <div>
+                <div class="p-stat-val">69%</div>
+                <div class="p-stat-lbl">WINRATE</div>
+              </div>
+              <div>
+                <div class="p-stat-val">3.75</div>
+                <div class="p-stat-lbl">K/D</div>
+              </div>
+              <div>
+                <div class="p-stat-val">18</div>
+                <div class="p-stat-lbl">TOURNEYS</div>
+              </div>
+            </div>
+            <div class="player-footer">
+              <span class="player-role-badge">SUPPORT & COVER</span>
+              <span class="player-btn-view">Detail Stat &rarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MATCHES & TOURNAMENTS SECTION (MLBB, FF, PUBGM)
+       ========================================================================== -->
+  <section id="matches" class="matches-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">MATCH SCHEDULE & RESULTS</span>
+        <h2 class="section-title">THE <span>ARENA OF BATTLE</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">Pantau jadwal duel dan rekam kemenangan KING ESPORT di turnamen MLBB, Free Fire, dan PUBG Mobile.</p>
+      </div>
+
+      <div class="matches-list">
+        <!-- Match 1: MLBB Grand Final -->
+        <div class="match-card">
+          <div class="match-team">
+            <div class="team-logo-mini">
+              <img src="assets/logo.svg" alt="KING Logo" style="width:28px;">
+            </div>
+            <div>
+              <div class="team-name-text is-king">KING ESPORT</div>
+              <span style="font-size: 0.75rem; color: var(--purple-bright);">MLBB DIV • SEED #1</span>
+            </div>
+          </div>
+
+          <div class="match-center">
+            <div class="match-score-pill">VS</div>
+            <span class="match-status-badge upcoming">UPCOMING // 2D LEFT</span>
+          </div>
+
+          <div class="match-team team-right">
+            <div class="team-logo-mini" style="border-color: #ef4444; background: rgba(239, 68, 68, 0.15);">
+              <span style="color: #ef4444; font-weight: 900; font-family: var(--font-display);">TF</span>
+            </div>
+            <div>
+              <div class="team-name-text">TITAN FORCE</div>
+              <span style="font-size: 0.75rem; color: var(--text-dim);">SEED #2</span>
+            </div>
+          </div>
+
+          <div class="match-meta">
+            <div class="tournament-name">MPL ID S14 GRAND FINALS</div>
+            <div class="match-date-time">BO7 • 18:30 WIB • YOUTUBE / TIKTOK LIVE</div>
+          </div>
+        </div>
+
+        <!-- Match 2: Free Fire World Series -->
+        <div class="match-card">
+          <div class="match-team">
+            <div class="team-logo-mini">
+              <img src="assets/logo.svg" alt="KING Logo" style="width:28px;">
+            </div>
+            <div>
+              <div class="team-name-text is-king">KING ESPORT</div>
+              <span style="font-size: 0.75rem; color: #22c55e;">BOOYAH x4</span>
+            </div>
+          </div>
+
+          <div class="match-center">
+            <div class="match-score-pill" style="color: #22c55e; border-color: rgba(34, 197, 94, 0.5);">#1 CHAMPION</div>
+            <span class="match-status-badge victory">128 PTS</span>
+          </div>
+
+          <div class="match-team team-right">
+            <div class="team-logo-mini">
+              <span style="color: #f59e0b; font-weight: 900; font-family: var(--font-display);">EP</span>
+            </div>
+            <div>
+              <div class="team-name-text">EVOS PHOENIX</div>
+              <span style="font-size: 0.75rem; color: var(--text-dim);">#2 (92 PTS)</span>
+            </div>
+          </div>
+
+          <div class="match-meta">
+            <div class="tournament-name">FFWS SEA INVITATIONAL</div>
+            <div class="match-date-time">MATCHDAY 3 • VICTORY RECAP</div>
+          </div>
+        </div>
+
+        <!-- Match 3: PUBG Mobile PMSL -->
+        <div class="match-card">
+          <div class="match-team">
+            <div class="team-logo-mini">
+              <img src="assets/logo.svg" alt="KING Logo" style="width:28px;">
+            </div>
+            <div>
+              <div class="team-name-text is-king">KING ESPORT</div>
+              <span style="font-size: 0.75rem; color: #fbbf24;">WWCD x3</span>
+            </div>
+          </div>
+
+          <div class="match-center">
+            <div class="match-score-pill" style="color: #fbbf24; border-color: rgba(251, 191, 36, 0.5);">#1 RANK</div>
+            <span class="match-status-badge victory">112 PTS</span>
+          </div>
+
+          <div class="match-team team-right">
+            <div class="team-logo-mini">
+              <span style="color: #ec4899; font-weight: 900; font-family: var(--font-display);">BR</span>
+            </div>
+            <div>
+              <div class="team-name-text">BIGETRON RED</div>
+              <span style="font-size: 0.75rem; color: var(--text-dim);">#2 (84 PTS)</span>
+            </div>
+          </div>
+
+          <div class="match-meta">
+            <div class="tournament-name">PMSL SEA GRAND FINAL 2026</div>
+            <div class="match-date-time">FINALS DAY • GRAND CHAMPION</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TROPHIES & HALL OF FAME SECTION
+       ========================================================================== -->
+  <section id="trophies" class="trophies-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">HALL OF GLORY</span>
+        <h2 class="section-title">THE <span>TROPHY ROOM</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">Koleksi trofi prestisius di kancah Mobile Legends, Free Fire, dan PUBG Mobile.</p>
+      </div>
+
+      <div class="trophies-grid">
+        <!-- Trophy 1 -->
+        <div class="trophy-card">
+          <div class="trophy-icon-wrapper">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <div class="trophy-year">2025 // JAKARTA</div>
+          <h3 class="trophy-name">MPL ID S12 CHAMPIONS</h3>
+          <p class="trophy-tier">Mobile Legends • Grand Champion</p>
+        </div>
+
+        <!-- Trophy 2 -->
+        <div class="trophy-card">
+          <div class="trophy-icon-wrapper">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+              <path d="M4 22h16"></path>
+              <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+              <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+              <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+            </svg>
+          </div>
+          <div class="trophy-year">2025 // MANILA</div>
+          <h3 class="trophy-name">M-SERIES FINALIST</h3>
+          <p class="trophy-tier">Mobile Legends • World Championship</p>
+        </div>
+
+        <!-- Trophy 3 -->
+        <div class="trophy-card">
+          <div class="trophy-icon-wrapper">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+          </div>
+          <div class="trophy-year">2025 // BANGKOK</div>
+          <h3 class="trophy-name">PMSL SEA GOLDEN PAN</h3>
+          <p class="trophy-tier">PUBG Mobile • 1st Place Champion</p>
+        </div>
+
+        <!-- Trophy 4 -->
+        <div class="trophy-card">
+          <div class="trophy-icon-wrapper">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <div class="trophy-year">2024 // KUALA LUMPUR</div>
+          <h3 class="trophy-name">FFWS REGIONAL CUP</h3>
+          <p class="trophy-tier">Free Fire Division • Undefeated Booyah</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       OFFICIAL MERCH SECTION
+       ========================================================================== -->
+  <section id="merch" class="merch-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">KING ARMORY STORE</span>
+        <h2 class="section-title">OFFICIAL <span>MERCHANDISE</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">Koleksi resmi jersey MLBB/FF/PUBGM, hoodie obsidian, dan gaming gear edisi terbatas.</p>
+      </div>
+
+      <div class="merch-grid">
+        <!-- Merch Item 1 -->
+        <div class="merch-card">
+          <div class="merch-img-box">
+            <span class="merch-badge">PRO EDITION 2026</span>
+            <img src="assets/merch-jersey.svg" alt="Official Pro Jersey" style="width: 170px;">
+          </div>
+          <div class="merch-info">
+            <span class="merch-category">Official Wear</span>
+            <h3 class="merch-title">KING Official Pro Jersey 2026</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Jersey resmi atlet MLBB, FF, dan PUBGM dengan bahan drifit cyber purple anti gerah dan logo 3D.</p>
+            <div class="merch-pricing">
+              <span class="merch-price">Rp 349.000</span>
+              <button class="btn-cyber-primary" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;" onclick="showToast('Jersey telah ditambahkan ke keranjang belanja!')">BELI SEKARANG</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Merch Item 2 -->
+        <div class="merch-card">
+          <div class="merch-img-box">
+            <span class="merch-badge">BESTSELLER</span>
+            <img src="assets/merch-hoodie.svg" alt="Cyber Hoodie" style="width: 170px;">
+          </div>
+          <div class="merch-info">
+            <span class="merch-category">Streetwear</span>
+            <h3 class="merch-title">KING Obsidian Cyber Hoodie</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Heavyweight 330gsm cotton fleece dengan cetak sablon reflektif logo mahkota KING ESPORT.</p>
+            <div class="merch-pricing">
+              <span class="merch-price">Rp 489.000</span>
+              <button class="btn-cyber-primary" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;" onclick="showToast('Hoodie telah ditambahkan ke keranjang belanja!')">BELI SEKARANG</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Merch Item 3 -->
+        <div class="merch-card">
+          <div class="merch-img-box">
+            <span class="merch-badge">PRO GEAR</span>
+            <img src="assets/merch-gear.svg" alt="Speed Deskmat" style="width: 170px;">
+          </div>
+          <div class="merch-info">
+            <span class="merch-category">Gaming Accessories</span>
+            <h3 class="merch-title">KING Speed-Control XL Deskmat</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Ukuran 900x400mm 4mm rubber base dengan permukaan mikro tenun anti air dan jahitan tepi presisi.</p>
+            <div class="merch-pricing">
+              <span class="merch-price">Rp 229.000</span>
+              <button class="btn-cyber-primary" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;" onclick="showToast('Deskmat telah ditambahkan ke keranjang belanja!')">BELI SEKARANG</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PARTNERS & SPONSORS MARQUEE
+       ========================================================================== -->
+  <section class="sponsors-section">
+    <div class="container">
+      <div class="sponsors-label">OFFICIAL PARTNERS & SPONSORS</div>
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <div class="sponsor-item">⚡ HYPERX</div>
+          <div class="sponsor-item">👑 RED BULL</div>
+          <div class="sponsor-item">📱 ASUS ROG PHONE</div>
+          <div class="sponsor-item">🎧 SECRET LAB</div>
+          <div class="sponsor-item">🎮 STEELSERIES</div>
+          <div class="sponsor-item">🚀 SNAPDRAGON</div>
+          <div class="sponsor-item">⚡ HYPERX</div>
+          <div class="sponsor-item">👑 RED BULL</div>
+          <div class="sponsor-item">📱 ASUS ROG PHONE</div>
+          <div class="sponsor-item">🎧 SECRET LAB</div>
+          <div class="sponsor-item">🎮 STEELSERIES</div>
+          <div class="sponsor-item">🚀 SNAPDRAGON</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       RECRUITMENT & TRYOUT CTA
+       ========================================================================== -->
+  <section id="tryout" class="tryout-banner-section">
+    <div class="container">
+      <div class="tryout-box">
+        <span class="section-subtitle">OPEN RECRUITMENT 2026</span>
+        <h2 class="tryout-title">SELEKSI ROSTER <span>MLBB • FF • PUBGM</span></h2>
+        <p class="tryout-desc">
+          Kamu memiliki rank <strong>Mythical Immortal</strong> (MLBB), <strong>Grandmaster</strong> (FF), atau <strong>Conqueror</strong> (PUBGM)? Tim scouting KING ESPORT membuka pintu bagi calon atlet berbakat untuk bergabung ke skuad Akademi & Pro.
+        </p>
+        <button class="btn-cyber-primary open-tryout-btn" style="padding: 1rem 2.8rem; font-size: 1.05rem;">
+          <span>DAFTAR TRYOUT SEKARANG</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER SECTION
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 0.5rem;">
+            <img src="assets/logo.svg" alt="KING Logo" style="width: 38px;">
+            <span class="brand-title">KING ESPORT</span>
+          </div>
+          <p>
+            Organisasi Esports Profesional Indonesia. Berjuang dengan kehormatan, memimpin dengan strategi, dan merajai skena kompetitif Mobile Legends, Free Fire, dan PUBG Mobile.
+          </p>
+          <div class="social-icons-row">
+            <a href="#" class="social-icon-btn" title="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-btn" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-btn" title="Discord">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6h0a14.5 14.5 0 0 0-4-1.2 11.4 11.4 0 0 0-.5 1.1 13.9 13.9 0 0 0-3 0 11.4 11.4 0 0 0-.5-1.1A14.5 14.5 0 0 0 6 6a15.7 15.7 0 0 0-2.3 9.4 14.7 14.7 0 0 0 4.5 2.3 11.3 11.3 0 0 0 1-1.6 9.6 9.6 0 0 1-1.5-.7l.4-.3a11.1 11.1 0 0 0 7.8 0l.4.3a9.6 9.6 0 0 1-1.5.7 11.3 11.3 0 0 0 1 1.6 14.7 14.7 0 0 0 4.5-2.3A15.7 15.7 0 0 0 18 6z"></path>
+                <circle cx="9.5" cy="12" r="1.2" fill="currentColor"></circle>
+                <circle cx="14.5" cy="12" r="1.2" fill="currentColor"></circle>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-btn" title="TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>DIVISI GAME</h4>
+          <ul class="footer-links">
+            <li><a href="#rosters">Mobile Legends (MPL ID)</a></li>
+            <li><a href="#rosters">Free Fire (FFWS)</a></li>
+            <li><a href="#rosters">PUBG Mobile (PMSL SEA)</a></li>
+            <li><a href="#rosters">Akademi KING Mobile</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>TAUTAN CEPAT</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Beranda</a></li>
+            <li><a href="#divisions">3 Divisi Utama</a></li>
+            <li><a href="#rosters">Pro Roster</a></li>
+            <li><a href="#matches">Jadwal Pertandingan</a></li>
+            <li><a href="#trophies">Ruang Kehormatan</a></li>
+            <li><a href="#merch">KING Store</a></li>
+            <li><a href="#tryout">Pendaftaran Tryout</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>KING VIP DISPATCH</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+            Dapatkan notifikasi jadwal pertandingan MLBB, FF, dan PUBGM langsung ke emailmu.
+          </p>
+          <form id="newsletter-form" class="newsletter-form">
+            <input type="email" id="nl-email" class="newsletter-input" placeholder="Masukkan email kamu..." required>
+            <button type="submit" class="btn-cyber-primary" style="padding: 0.7rem 1.2rem;">KIRIM</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 KING ESPORT. All Rights Reserved. Built with Cyber Purple & Obsidian Black.</div>
+        <div style="display:flex; gap: 1.5rem;">
+          <a href="#" style="color:var(--text-dim);">Privacy Policy</a>
+          <a href="#" style="color:var(--text-dim);">Terms of Service</a>
+          <a href="#" style="color:var(--text-dim);">Brand Assets</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL: PLAYER STATS & BIO
+       ========================================================================== -->
+  <div id="player-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button id="close-player-modal" class="modal-close-btn">&times;</button>
+      
+      <div style="display:flex; align-items:center; gap:1.25rem; margin-bottom: 1.5rem;">
+        <div>
+          <span id="modal-game" class="game-tag" style="position:static; display:inline-block; margin-bottom:0.4rem;">GAME</span>
+          <h2 id="modal-ign" style="font-size: 1.8rem; line-height: 1.1;">PLAYER IGN</h2>
+          <div id="modal-realname" style="color: var(--text-muted); font-size: 0.95rem;">Real Name</div>
+        </div>
+      </div>
+
+      <div style="background: rgba(147, 51, 234, 0.1); border: 1px solid var(--purple-border); padding: 1rem; border-radius: 6px; margin-bottom: 1.25rem;">
+        <span style="font-family: var(--font-display); font-size: 0.75rem; color: var(--purple-bright); letter-spacing: 1px; font-weight: 700;">ROLE & SPECIALTY:</span>
+        <div id="modal-role" style="font-weight: 700; font-size: 1.1rem; color: #fff;">Role</div>
+        <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Signature Hero / Weapon: <strong id="modal-mainhero" style="color: #c084fc;">Hero</strong></div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; text-align: center; margin-bottom: 1.5rem; background: rgba(10, 8, 16, 0.6); padding: 1rem; border-radius: 6px; border: 1px solid rgba(168, 85, 247, 0.2);">
+        <div>
+          <div id="modal-winrate" style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 900; color: var(--purple-bright);">0%</div>
+          <div style="font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase;">Win Rate</div>
+        </div>
+        <div>
+          <div id="modal-kd" style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 900; color: #fff;">0.00</div>
+          <div style="font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase;">K/D/A</div>
+        </div>
+        <div>
+          <div id="modal-hs" style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 900; color: #22c55e;">0%</div>
+          <div style="font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase;">HS / Rank</div>
+        </div>
+        <div>
+          <div id="modal-tournaments" style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 900; color: var(--accent-gold);">0</div>
+          <div style="font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase;">Turnamen</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 1.25rem;">
+        <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: #e2e8f0;">PRESTASI UTAMA</h4>
+        <ul id="modal-achievements" style="font-size: 0.9rem; color: #cbd5e1; line-height: 1.7;">
+          <!-- Injected via JS -->
+        </ul>
+      </div>
+
+      <blockquote id="modal-quote" style="border-left: 3px solid var(--purple-bright); padding-left: 1rem; font-style: italic; color: var(--text-muted); font-size: 0.95rem;">
+        "Quote player"
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: REGISTRATION / TRYOUT FORM (MLBB, FF, PUBGM)
+       ========================================================================== -->
+  <div id="tryout-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button id="close-tryout-modal" class="modal-close-btn">&times;</button>
+      
+      <div style="text-align: center; margin-bottom: 1.75rem;">
+        <span class="section-subtitle">SELEKSI ATLET 2026</span>
+        <h2 style="font-size: 1.75rem; margin-top: 0.25rem;">PENDAFTARAN <span>TRYOUT</span></h2>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">Pilih divisi game (MLBB, Free Fire, atau PUBG Mobile) dan masukkan data akun kamu.</p>
+      </div>
+
+      <form id="tryout-form">
+        <div class="form-group">
+          <label class="form-label" for="tryout-name">Nama Lengkap</label>
+          <input type="text" id="tryout-name" class="form-input" placeholder="Contoh: Pratama Wijaya" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="tryout-ign">In-Game Nickname & ID Akun</label>
+          <input type="text" id="tryout-ign" class="form-input" placeholder="Contoh: KING_Predator (ID: 18274619)" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="tryout-game">Divisi Game yang Dipilih</label>
+          <select id="tryout-game" class="form-select" required>
+            <option value="Mobile Legends (MLBB)">MOBILE LEGENDS: BANG BANG (MLBB)</option>
+            <option value="Free Fire (FF)">FREE FIRE (FF)</option>
+            <option value="PUBG Mobile (PUBGM)">PUBG MOBILE (PUBGM)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="tryout-rank">Rank & Poin Tertinggi</label>
+          <input type="text" id="tryout-rank" class="form-input" placeholder="Contoh: Mythical Immortal 150★ / Grandmaster / Conqueror Top 100" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="tryout-role">Peran / Role Utama</label>
+          <input type="text" id="tryout-role" class="form-input" placeholder="Contoh: Jungler / Rusher / IGL / Roamer" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="tryout-discord">Nomor WhatsApp & ID Discord</label>
+          <input type="text" id="tryout-discord" class="form-input" placeholder="Contoh: 081234567890 / kingplayer#1234" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="tryout-link">Link Video Gameplay / Screenshot Profil</label>
+          <input type="url" id="tryout-link" class="form-input" placeholder="Link YouTube / TikTok / Google Drive">
+        </div>
+
+        <button type="submit" class="btn-cyber-primary" style="width: 100%; padding: 0.9rem; font-size: 1rem; margin-top: 0.5rem;">
+          KIRIM PENDAFTARAN SELEKSI
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>

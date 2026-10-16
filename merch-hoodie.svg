@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hoodieGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#191328"/>
+      <stop offset="100%" stop-color="#07060a"/>
+    </linearGradient>
+  </defs>
+  <!-- Glow -->
+  <circle cx="100" cy="100" r="70" fill="#9333ea" opacity="0.15"/>
+  <!-- Hood -->
+  <path d="M65 50 C65 20, 135 20, 135 50 Q100 70 65 50 Z" fill="#251a3d" stroke="#a855f7" stroke-width="2"/>
+  <path d="M78 45 C78 30, 122 30, 122 45 Z" fill="#0c0a13"/>
+  <!-- Drawstrings -->
+  <line x1="88" y1="65" x2="88" y2="90" stroke="#c084fc" stroke-width="2"/>
+  <line x1="112" y1="65" x2="112" y2="90" stroke="#c084fc" stroke-width="2"/>
+  <!-- Body -->
+  <path d="M65 55 L35 75 L20 120 L40 125 L50 95 L50 170 L150 170 L150 95 L160 125 L180 120 L165 75 L135 55 Z" 
+        fill="url(#hoodieGrad)" stroke="#a855f7" stroke-width="2"/>
+  <!-- Kangaroo Pocket -->
+  <polygon points="68,135 132,135 125,165 75,165" fill="#130e20" stroke="#7e22ce" stroke-width="1.5"/>
+  <!-- Cyber Crown Emblem on chest -->
+  <polygon points="90,95 95,85 100,90 105,85 110,95 100,102" fill="#c084fc"/>
+  <text x="100" y="115" text-anchor="middle" font-family="'Orbitron', sans-serif" font-size="7" font-weight="900" fill="#fff" letter-spacing="1">KING</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="jerseyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181128"/>
+      <stop offset="50%" stop-color="#0e0a19"/>
+      <stop offset="100%" stop-color="#06050b"/>
+    </linearGradient>
+    <linearGradient id="jPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7e22ce"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Glow -->
+  <circle cx="100" cy="100" r="75" fill="#a855f7" opacity="0.15" filter="blur(15px)"/>
+  <!-- Jersey Body -->
+  <path d="M70 40 L50 65 L25 80 L35 110 L55 95 L55 170 L145 170 L145 95 L165 110 L175 80 L150 65 L130 40 Q100 55 70 40 Z" 
+        fill="url(#jerseyGrad)" stroke="#a855f7" stroke-width="2"/>
+  <!-- Shoulder Accents -->
+  <polygon points="50,65 25,80 35,110 55,95" fill="#581c87" stroke="#c084fc" stroke-width="1.5"/>
+  <polygon points="150,65 175,80 165,110 145,95" fill="#581c87" stroke="#c084fc" stroke-width="1.5"/>
+  <!-- Collar V -->
+  <polygon points="85,47 100,70 115,47" fill="#c084fc"/>
+  <!-- Cyber Side Stripes -->
+  <path d="M55 105 L65 170" stroke="url(#jPurple)" stroke-width="4"/>
+  <path d="M145 105 L135 170" stroke="url(#jPurple)" stroke-width="4"/>
+  <!-- Center Crown Logo on Chest -->
+  <polygon points="90,95 95,85 100,90 105,85 110,95 100,102" fill="#fbbf24"/>
+  <text x="100" y="118" text-anchor="middle" font-family="'Orbitron', sans-serif" font-size="9" font-weight="900" fill="#fff" letter-spacing="1">KING</text>
+  <text x="100" y="127" text-anchor="middle" font-family="'Orbitron', sans-serif" font-size="6" font-weight="700" fill="#c084fc" letter-spacing="2">ESPORT</text>
+</svg>

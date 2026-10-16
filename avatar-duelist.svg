@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="pGrad1" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="60%" stop-color="#7e22ce"/>
+      <stop offset="100%" stop-color="#3b0764"/>
+    </radialGradient>
+    <filter id="neon1">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <circle cx="100" cy="100" r="90" fill="#0f0c1a" stroke="#a855f7" stroke-width="3"/>
+  <!-- Cyber Hood / Helmet -->
+  <path d="M50 145 C50 85, 70 45, 100 45 C130 45, 150 85, 150 145 Z" fill="#1f1635" stroke="#7e22ce" stroke-width="2"/>
+  <!-- Cyber Mask -->
+  <polygon points="75,95 100,80 125,95 120,135 100,150 80,135" fill="#140f24" stroke="#a855f7" stroke-width="2"/>
+  <!-- Neon Visor -->
+  <polygon points="72,98 100,108 128,98 123,115 100,123 77,115" fill="#ec4899" filter="url(#neon1)"/>
+  <!-- Crown Headband Detail -->
+  <polygon points="90,65 100,55 110,65 105,72 95,72" fill="#facc15" filter="url(#neon1)"/>
+  <!-- Shoulders -->
+  <path d="M35 185 C45 150, 75 145, 100 145 C125 145, 155 150, 165 185 Z" fill="#251a42" stroke="#9333ea" stroke-width="2"/>
+</svg>

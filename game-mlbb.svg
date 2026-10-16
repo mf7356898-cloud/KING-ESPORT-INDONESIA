@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mlbbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#7e22ce"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Shield -->
+  <polygon points="50,5 90,20 80,75 50,95 20,75 10,20" fill="#140f25" stroke="url(#mlbbGrad)" stroke-width="4"/>
+  <!-- Crossed Swords / Winged Emblem -->
+  <path d="M30 35 L70 65 M70 35 L30 65" stroke="#fbbf24" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="50" cy="50" r="14" fill="#581c87" stroke="#e9d5ff" stroke-width="2"/>
+  <polygon points="50,42 54,48 60,49 55,54 57,60 50,56 43,60 45,54 40,49 46,48" fill="#fbbf24"/>
+  <text x="50" y="86" text-anchor="middle" font-family="'Orbitron', sans-serif" font-size="11" font-weight="900" fill="#ffffff" letter-spacing="1">MLBB</text>
+</svg>
